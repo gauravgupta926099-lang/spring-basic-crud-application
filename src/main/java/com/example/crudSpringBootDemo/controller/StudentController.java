@@ -52,10 +52,10 @@ public class StudentController {
     @PutMapping
     public ResponseEntity<UpdateStudentResponseDto> updateStudent(@RequestParam Long id,
                                                                   @RequestBody UpdateStudentRequestDto studentReq) {
-        UpdateStudentResponseDto studentResp =
+        UpdateStudentResponseDto studentRes =
                 studentService.updateStudent(id, studentReq);
 
-        return ResponseEntity.ok(studentResp);
+        return ResponseEntity.ok(studentRes);
     }
 
     @DeleteMapping
